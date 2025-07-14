@@ -1,0 +1,21 @@
+title: QuickShelf
+description: A fast and efficient application for managing your digital library
+baseurl: ""
+url: "https://quickshelf.github.io"
+
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
