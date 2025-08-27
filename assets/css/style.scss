@@ -245,6 +245,7 @@ body {
     text-align: center;
     border: 1px solid $border-light;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 
     &:hover {
         transform: translateY(-4px);
@@ -270,6 +271,24 @@ body {
         color: $text-secondary;
         line-height: 1.5;
         font-size: 0.9375rem;
+    }
+
+    .new-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: linear-gradient(135deg, #FF3B30, #FF6B60);
+        color: $white;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 6px 20px rgba(255, 59, 48, 0.4);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        animation: pulse-new 2s ease-in-out infinite;
+        z-index: 10;
     }
 }
 
@@ -364,5 +383,17 @@ body {
 
     .navbar-nav {
         display: none;
+    }
+}
+
+// Keyframes
+@keyframes pulse-new {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
     }
 }
